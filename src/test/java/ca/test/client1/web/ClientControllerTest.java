@@ -58,7 +58,7 @@ class ClientControllerTest {
 
         mockMvc.perform(get("/api/clients/1"))
                 .andExpect(status().isNotFound());
-               // .andExpect(content().string("Client with id 1 not found"));
+//hedha ma7abbech yekhdem    // .andExpect(content().string("Client with id 1 not found"));
         verify(clientService,times(1)).getClientById(1L);
         //when
         //then
@@ -95,7 +95,7 @@ class ClientControllerTest {
                 .when(clientService).deleteClientById(1L);
         mockMvc.perform(delete("/api/clients/1"))
                 .andExpect(status().isNotFound());
-                //.andExpect(content().string("Client with id 1 not found"));
+               // w hedha zeda //.andExpect(content().string("Client with id 1 not found"));
     }
 
     @Test
